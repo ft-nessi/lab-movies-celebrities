@@ -1,0 +1,12 @@
+<h2>Create a new movie</h2>
+
+<form action="/movies/create" method="POST">
+
+    <label for="celebrities">Select cast:</label>
+    <select name="celebrities" id="celebritiesSelect" multiple >
+        {{#each celebritiesFromDb }}
+             <option value="{{this._id}}">{{this.name}}</option>
+        {{/each}}
+    </select>
+
+</form>
